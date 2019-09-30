@@ -1,0 +1,694 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Metadata": {
+        "AWS::CloudFormation::Designer": {
+            "02e0b3e2-0b50-43b6-a73c-4d5ed016c46b": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 390,
+                    "y": -280
+                },
+                "z": 0,
+                "embeds": []
+            },
+            "9694f081-55af-451b-acf3-095098f0f7c3": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 200,
+                    "y": 860
+                },
+                "z": 0,
+                "embeds": [],
+                "dependson": [
+                    "2287ed08-61db-453f-84fe-09013a8d45ae"
+                ]
+            },
+            "aa0025fb-9842-475f-884f-ba90616de1bc": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 200,
+                    "y": 750
+                },
+                "z": 0,
+                "embeds": [],
+                "dependson": [
+                    "2287ed08-61db-453f-84fe-09013a8d45ae"
+                ]
+            },
+            "0bf79024-2f24-437f-ae1f-347ffab97866": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 200,
+                    "y": 630
+                },
+                "z": 0,
+                "embeds": [],
+                "dependson": [
+                    "2287ed08-61db-453f-84fe-09013a8d45ae"
+                ]
+            },
+            "274c17c5-1bb0-49e2-8538-dff272e0a6c1": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 200,
+                    "y": 510
+                },
+                "z": 0,
+                "embeds": [],
+                "dependson": [
+                    "2287ed08-61db-453f-84fe-09013a8d45ae"
+                ]
+            },
+            "69ad2729-bee9-4ab3-ab34-bb972dec7f4d": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 190,
+                    "y": 400
+                },
+                "z": 0,
+                "embeds": [],
+                "dependson": [
+                    "2287ed08-61db-453f-84fe-09013a8d45ae"
+                ]
+            },
+            "2287ed08-61db-453f-84fe-09013a8d45ae": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 400,
+                    "y": 230
+                },
+                "z": 0,
+                "embeds": []
+            },
+            "35e361d1-9650-498b-9d1b-bad7519d5494": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 120,
+                    "y": -170
+                },
+                "z": 0,
+                "embeds": [],
+                "isassociatedwith": [
+                    "2287ed08-61db-453f-84fe-09013a8d45ae"
+                ]
+            },
+            "51659422-87ff-497f-a08d-8e958a9d22de": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": -290,
+                    "y": 400
+                },
+                "z": 0,
+                "embeds": [],
+                "isassociatedwith": [
+                    "2287ed08-61db-453f-84fe-09013a8d45ae",
+                    "35e361d1-9650-498b-9d1b-bad7519d5494"
+                ]
+            },
+            "548591f5-bbd2-4e76-84a0-2fd0a78daf7e": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": -740,
+                    "y": 650
+                },
+                "z": 0,
+                "embeds": []
+            },
+            "344d0bb2-f0b8-4a42-9b80-6542b74bd0b9": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": -620,
+                    "y": 860
+                },
+                "z": 0,
+                "embeds": []
+            },
+            "1a8906f1-7f5a-47ad-82e9-8967432c346e": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": -550,
+                    "y": 1020
+                },
+                "z": 0,
+                "embeds": []
+            },
+            "b4f4e04c-757c-4a43-97c5-aa23cbdbbd22": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": -240,
+                    "y": 1210
+                },
+                "z": 0,
+                "embeds": []
+            },
+            "a06bd7e9-ed95-42c8-a51c-287794abad7b": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": -40,
+                    "y": 1290
+                },
+                "z": 0,
+                "embeds": []
+            }
+        }
+    },
+    "Resources": {
+        "IAMRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyName": "AdminPolicy",
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": "*",
+                                    "Resource": "*"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "02e0b3e2-0b50-43b6-a73c-4d5ed016c46b"
+                }
+            },
+            "Condition": ""
+        },
+        "AutoTagLambda": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+                "FunctionName": "AutoTagLambda",
+                "Code": {
+                    "ZipFile": {
+                        "Fn::Join": [
+                            "\n",
+                            [
+                                "from __future__ import print_function",
+								"from botocore.config import Config",
+								"import json",
+								"import boto3",
+								"import logging",
+								"import time",
+								"import datetime",
+								"logger=logging.getLogger()",
+								"logger.setLevel(logging.INFO)",
+								"def lambda_handler(event,context):",
+								"    tags=json.loads('{ \"TagName\":\"TagValue\" }')",
+								"    taglist=[]",
+								"    for key in tags:",
+								"        d={}",
+								"        d['Key']=key",
+								"        d['Value']=tags[key]",
+								"        taglist.append(d)",
+								"    logger.info('Evnt:'+str(event))",
+								"    ids=[]",
+								"    try:",
+								"        detail=event['detail']",
+								"        evntnm=detail['eventName']",
+								"        principal=detail['userIdentity']['principalId']",
+								"        userType=detail['userIdentity']['type']",
+								"        if userType=='IAMUser':",
+								"           user=detail['userIdentity']['userName']",
+								"        else:",
+								"           user=principal.split(':')[1]",
+								"        config=Config(retries=dict(max_attempts=10))",
+								"        ec2=boto3.resource('ec2',config=config)",
+								"        s3=boto3.resource('s3',config=config)",
+								"        dbcl=boto3.client('dynamodb',config=config)",
+								"        elbcl=boto3.client('elb',config=config)",
+								"        if evntnm=='CreateVolume':",
+								"            ids.append(detail['responseElements']['volumeId'])",
+								"        elif evntnm=='RunInstances':",
+								"            items=detail['responseElements']['instancesSet']['items']",
+								"            for item in items:",
+								"                ids.append(item['instanceId'])",
+								"            base=ec2.instances.filter(InstanceIds=ids)",
+								"            for instance in base:",
+								"                for vol in instance.volumes.all():",
+								"                    ids.append(vol.id)",
+								"                for eni in instance.network_interfaces:",
+								"                    ids.append(eni.id)",
+								"        elif evntnm=='CreateImage':",
+								"            ids.append(detail['responseElements']['imageId'])",
+								"            logger.info(ids)",
+								"        elif evntnm=='CreateSnapshot':",
+								"            ids.append(detail['responseElements']['snapshotId'])",
+								"            logger.info(ids)",
+								"        elif evntnm=='CreateBucket':",
+								"            ids.append(str(detail['requestParameters']['bucketName']))",
+								"        elif evntnm=='CreateTable':",
+								"            ids.append(str(detail['responseElements']['tableDescription']['tableArn']))",
+								"        elif evntnm =='CreateSecurityGroup':",
+								"            ids.append(str(detail['responseElements']['groupId']))",
+								"        elif evntnm =='CreateLoadBalancer':",
+								"            ids.append(str(detail['requestParameters']['loadBalancerName']))",
+								"        else:",
+								"            logger.info('UnkwnEvnt')",
+								"        if ids:",
+								"            u={}",
+								"            u['Key']='Owner'",
+								"            u['Value']=user",
+								"            taglist.append(u)",
+								"            for resourceid in ids:",
+								"                print('TaggingResource '+resourceid)",
+								"                if evntnm=='CreateBucket':",
+								"                    bucket_tagging=s3.BucketTagging(resourceid)",
+								"                    bucket_tagging.put(Tagging={'TagSet':taglist})",
+								"                elif evntnm=='CreateTable':",
+								"                    time.sleep(30)",
+								"                    ret=dbcl.tag_resource(ResourceArn=resourceid,Tags=taglist)",
+								"                elif evntnm=='CreateSecurityGroup':",
+								"                    security_group=ec2.SecurityGroup(resourceid)",
+								"                    security_group.create_tags(DryRun=False,Tags=taglist)",
+								"                elif evntnm=='CreateLoadBalancer':",
+								"                    elbcl.add_tags(LoadBalancerNames=[resourceid],Tags=taglist)",
+								"                else:",
+								"                    ec2.create_tags(Resources=ids,Tags=taglist)",
+								"        return True",
+								"    except Exception as e:",
+								"        logger.error('SomethingWrong:'+str(e))",
+								"        return False",
+								""
+                            ]
+                        ]
+                    }
+                },
+                "Description": "This function tags Resources in response to Cloudwatch Events.",
+                "Handler": "index.lambda_handler",
+                "Role": {
+                    "Fn::GetAtt": [
+                        "IAMRole",
+                        "Arn"
+                    ]
+                },
+                "Runtime": "python2.7",
+                "Timeout": "60"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "2287ed08-61db-453f-84fe-09013a8d45ae"
+                }
+            },
+            "Condition": ""
+        },
+        "Version": {
+            "Type": "AWS::Lambda::Version",
+            "Properties": {
+                "FunctionName": {
+                    "Ref": "AutoTagLambda"
+                },
+                "Description": "Stable version"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "35e361d1-9650-498b-9d1b-bad7519d5494"
+                }
+            },
+            "Condition": ""
+        },
+        "ProdAlias": {
+            "Type": "AWS::Lambda::Alias",
+            "Properties": {
+                "FunctionName": {
+                    "Ref": "AutoTagLambda"
+                },
+                "FunctionVersion": {
+                    "Fn::GetAtt": [
+                        "Version",
+                        "Version"
+                    ]
+                },
+                "Name": "PROD"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "51659422-87ff-497f-a08d-8e958a9d22de"
+                }
+            },
+            "Condition": ""
+        },
+        "LP589BH": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+                "FunctionName": {
+                    "Ref": "ProdAlias"
+                },
+                "Action": "lambda:InvokeFunction",
+                "Principal": "events.amazonaws.com",
+                "SourceArn": {
+                    "Fn::GetAtt": [
+                        "Ec2Rule",
+                        "Arn"
+                    ]
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "548591f5-bbd2-4e76-84a0-2fd0a78daf7e"
+                }
+            }
+        },
+        "S3Rule": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+                "Name": "NewS3Detected",
+                "Targets": [
+                    {
+                        "Arn": {
+                            "Ref": "ProdAlias"
+                        },
+                        "Id": "Production"
+                    }
+                ],
+                "EventPattern": {
+                    "source": [
+                        "aws.s3"
+                    ],
+                    "detail-type": [
+                        "AWS API Call via CloudTrail"
+                    ],
+                    "detail": {
+                        "eventSource": [
+                            "s3.amazonaws.com"
+                        ],
+                        "eventName": [
+                            "CreateBucket"
+                        ]
+                    }
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "69ad2729-bee9-4ab3-ab34-bb972dec7f4d"
+                }
+            },
+            "DependsOn": [
+                "AutoTagLambda"
+            ],
+            "Condition": ""
+        },
+        "Ec2Rule": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+                "Name": "NewEc2ResourceDetected",
+                "Targets": [
+                    {
+                        "Arn": {
+                            "Ref": "ProdAlias"
+                        },
+                        "Id": "Production"
+                    }
+                ],
+                "EventPattern": {
+                    "source": [
+                        "aws.ec2"
+                    ],
+                    "detail-type": [
+                        "AWS API Call via CloudTrail"
+                    ],
+                    "detail": {
+                        "eventSource": [
+                            "ec2.amazonaws.com"
+                        ],
+                        "eventName": [
+                            "CreateVolume",
+                            "RunInstances",
+                            "CreateImage",
+                            "CreateSnapshot",
+                            "CreateSecurityGroup"
+                        ]
+                    }
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "0bf79024-2f24-437f-ae1f-347ffab97866"
+                }
+            },
+            "DependsOn": [
+                "AutoTagLambda"
+            ],
+            "Condition": ""
+        },
+        "LoadBalancerRule": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+                "Name": "NewLoadBalancerDetected",
+                "Targets": [
+                    {
+                        "Arn": {
+                            "Ref": "ProdAlias"
+                        },
+                        "Id": "Production"
+                    }
+                ],
+                "EventPattern": {
+                    "source": [
+                        "aws.elasticloadbalancing"
+                    ],
+                    "detail-type": [
+                        "AWS API Call via CloudTrail"
+                    ],
+                    "detail": {
+                        "eventSource": [
+                            "elasticloadbalancing.amazonaws.com"
+                        ],
+                        "eventName": [
+                            "CreateLoadBalancer"
+                        ]
+                    }
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "274c17c5-1bb0-49e2-8538-dff272e0a6c1"
+                }
+            },
+            "DependsOn": [
+                "AutoTagLambda"
+            ],
+            "Condition": ""
+        },
+        "DynamoDbRule": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+                "Name": "NewDynamoDbDetected",
+                "Targets": [
+                    {
+                        "Arn": {
+                            "Ref": "ProdAlias"
+                        },
+                        "Id": "Production"
+                    }
+                ],
+                "EventPattern": {
+                    "source": [
+                        "aws.dynamodb"
+                    ],
+                    "detail-type": [
+                        "AWS API Call via CloudTrail"
+                    ],
+                    "detail": {
+                        "eventSource": [
+                            "dynamodb.amazonaws.com"
+                        ],
+                        "eventName": [
+                            "CreateTable"
+                        ]
+                    }
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "aa0025fb-9842-475f-884f-ba90616de1bc"
+                }
+            },
+            "DependsOn": [
+                "AutoTagLambda"
+            ],
+            "Condition": ""
+        },
+        "AsgRule": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+                "Name": "NewASGDetected",
+                "Targets": [
+                    {
+                        "Arn": {
+                            "Ref": "ProdAlias"
+                        },
+                        "Id": "Production"
+                    }
+                ],
+                "EventPattern": {
+                    "source": [
+                        "aws.autoscaling"
+                    ],
+                    "detail-type": [
+                        "AWS API Call via CloudTrail"
+                    ],
+                    "detail": {
+                        "eventSource": [
+                            "autoscaling.amazonaws.com"
+                        ],
+                        "eventName": [
+                            "CreateAutoScalingGroup"
+                        ]
+                    }
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "9694f081-55af-451b-acf3-095098f0f7c3"
+                }
+            },
+            "DependsOn": [
+                "AutoTagLambda"
+            ],
+            "Condition": ""
+        },
+        "LP34UEU": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+                "FunctionName": {
+                    "Ref": "ProdAlias"
+                },
+                "Action": "lambda:InvokeFunction",
+                "Principal": "events.amazonaws.com",
+                "SourceArn": {
+                    "Fn::GetAtt": [
+                        "S3Rule",
+                        "Arn"
+                    ]
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "344d0bb2-f0b8-4a42-9b80-6542b74bd0b9"
+                }
+            }
+        },
+        "LP4Y61L": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+                "FunctionName": {
+                    "Ref": "ProdAlias"
+                },
+                "Action": "lambda:InvokeFunction",
+                "Principal": "events.amazonaws.com",
+                "SourceArn": {
+                    "Fn::GetAtt": [
+                        "LoadBalancerRule",
+                        "Arn"
+                    ]
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "1a8906f1-7f5a-47ad-82e9-8967432c346e"
+                }
+            }
+        },
+        "LP59IQ0": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+                "FunctionName": {
+                    "Ref": "ProdAlias"
+                },
+                "Action": "lambda:InvokeFunction",
+                "Principal": "events.amazonaws.com",
+                "SourceArn": {
+                    "Fn::GetAtt": [
+                        "DynamoDbRule",
+                        "Arn"
+                    ]
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "b4f4e04c-757c-4a43-97c5-aa23cbdbbd22"
+                }
+            }
+        },
+        "LP31WS4": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+                "FunctionName": {
+                    "Ref": "ProdAlias"
+                },
+                "Action": "lambda:InvokeFunction",
+                "Principal": "events.amazonaws.com",
+                "SourceArn": {
+                    "Fn::GetAtt": [
+                        "AsgRule",
+                        "Arn"
+                    ]
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "a06bd7e9-ed95-42c8-a51c-287794abad7b"
+                }
+            }
+        }
+    }
+}
